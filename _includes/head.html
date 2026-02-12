@@ -15,8 +15,26 @@
 
 <!-- Force light theme: remove any persisted dark mode preference -->
 <script>
+  // Immediately force light theme
   document.documentElement.removeAttribute('data-theme');
   try { localStorage.removeItem('theme'); } catch (e) { }
+
+  // Re-force after all scripts load (main.min.js sets dark theme from localStorage)
+  document.addEventListener('DOMContentLoaded', function () {
+    document.documentElement.removeAttribute('data-theme');
+    try { localStorage.removeItem('theme'); } catch (e) { }
+  });
+
+  // Watch for any script trying to set data-theme back to dark
+  var _themeObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (m) {
+      if (m.attributeName === 'data-theme') {
+        document.documentElement.removeAttribute('data-theme');
+        try { localStorage.removeItem('theme'); } catch (e) { }
+      }
+    });
+  });
+  _themeObserver.observe(document.documentElement, { attributes: true });
 </script>
 
 <!-- For all browsers -->
