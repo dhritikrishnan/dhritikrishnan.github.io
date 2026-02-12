@@ -9,13 +9,14 @@ $light-primary-color : mix(#fff, $primary-color, 50%);
 $lighter-primary-color : mix(#fff, $primary-color, 90%);
 $background : #FDFBF7;
 $background-light : #F5F3EF;
+$masthead-bg : #FFF0F5;
 $background-lighter : #ebebeb;
 $text : #000000;
 $text-muted : #303030;
 $link : #0000ff;
 $link-dark : #0000cc;
 $link-light : #3333ff;
-$footer : #d0d0d0;
+$footer : $masthead-bg;
 $border : #c0c0c0;
 $border-dark : #808080;
 $selection-bg : #b3d4fc;
@@ -41,6 +42,7 @@ $sidebar-screen-min-width : 1024px;
 /* Light theme for the site */
 :root {
   --global-base-color : #{$primary-color};
+  --global-masthead-bg-color: #{$masthead-bg};
   --global-bg-color : #{$background};
   --global-footer-bg-color : #{$footer};
   --global-border-color : #{$border};
