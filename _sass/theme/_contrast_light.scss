@@ -1,45 +1,46 @@
 /* ==========================================================================
-   CONTRAST THEME - LIGHT VERSION
+   CONTRAST THEME - DARK CREATIVE VERSION
    ========================================================================== */
-/* Color codes used for the theme */
-$primary-color : #b60000;
-$dark-primary-color : mix(#000, $primary-color, 40%);
-$darker-primary-color : mix(#000, $primary-color, 60%);
-$light-primary-color : mix(#fff, $primary-color, 50%);
-$lighter-primary-color : mix(#fff, $primary-color, 90%);
-$background : #ffffff;
-$background-light : #f5f5f5;
-$masthead-bg : #FFF0F5;
-$background-lighter : #ebebeb;
-$text : #000000;
-$text-muted : #303030;
-$link : #0000ff;
-$link-dark : #0000cc;
-$link-light : #3333ff;
-$footer : $masthead-bg;
-$border : #c0c0c0;
-$border-dark : #808080;
-$selection-bg : #b3d4fc;
-$selection-text : #000000;
+
+/* Color codes used for the dark creative theme */
+$primary-color : #8b5cf6;
+$dark-primary-color : #6d28d9;
+$darker-primary-color : #5b21b6;
+$light-primary-color : #a78bfa;
+$lighter-primary-color : #c4b5fd;
+$background : #0a0a0f;
+$background-light : #12121a;
+$masthead-bg : rgba(10, 10, 15, 0.8);
+$background-lighter : #1a1a2e;
+$text : #e0e0e8;
+$text-muted : #9a9aae;
+$link : #a78bfa;
+$link-dark : #c4b5fd;
+$link-light : #8b5cf6;
+$footer : #0a0a0f;
+$border : #1e1e2e;
+$border-dark : #2a2a3e;
+$selection-bg : #6d28d9;
+$selection-text : #ffffff;
 
 /* Color codes used for the site */
-$danger-color : #ff0000;
-$info-color : #0000ff;
-$notice-color : #000000;
-$success-color : #008000;
-$warning-color : #ff8800;
+$danger-color : #f87171;
+$info-color : #60a5fa;
+$notice-color : #e0e0e8;
+$success-color : #34d399;
+$warning-color : #fbbf24;
 
 /* Other basic settings for the template */
-$border-radius : 4px;
-$box-shadow : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition : all 0.2s ease-in-out;
+$border-radius : 8px;
+$box-shadow : 0 4px 20px rgba(139, 92, 246, 0.08);
+$global-transition : all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 $masthead-height : 70px;
 $navicon-width : 28px;
 $navicon-height : 4px;
 $sidebar-link-max-width : 250px;
 $sidebar-screen-min-width : 1024px;
 
-/* Light theme for the site */
+/* Light theme for the site (repurposed as dark creative) */
 :root {
   --global-base-color : #{$primary-color};
   --global-masthead-bg-color: #{$masthead-bg};
@@ -52,18 +53,27 @@ $sidebar-screen-min-width : 1024px;
   --global-fig-caption-color : #{$text-muted};
   --global-link-color : #{$link};
   --global-link-color-hover : #{$link-dark};
-  --global-link-color-visited : #{$primary-color};
+  --global-link-color-visited : #{$light-primary-color};
   --global-masthead-link-color : #{$text};
   --global-masthead-link-color-hover : #{$primary-color};
   --global-text-color : #{$text};
   --global-text-color-light : #{$text-muted};
-  --global-thead-color : #{$border};
+  --global-thead-color : #{$background-lighter};
   --global-toc-bg-color : #{$background-light};
   --global-selection-bg-color : #{$selection-bg};
   --global-selection-text-color : #{$selection-text};
+
+  /* Custom creative variables */
+  --accent-gradient: linear-gradient(135deg, #8b5cf6, #6366f1, #3b82f6);
+  --card-bg: #{$background-light};
+  --card-border: #{$border};
+  --card-hover-border: rgba(139, 92, 246, 0.4);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+  --glow-color: rgba(139, 92, 246, 0.3);
 }
 
-/* Text selection styling for light theme */
+/* Text selection styling */
 ::selection {
   background-color: var(--global-selection-bg-color);
   color: var(--global-selection-text-color);
@@ -74,7 +84,7 @@ $sidebar-screen-min-width : 1024px;
   color: var(--global-selection-text-color);
 }
 
-/* Override notice colors for high contrast */
+/* Override notice colors for dark creative */
 .page__content {
 
   .notice,
@@ -84,12 +94,13 @@ $sidebar-screen-min-width : 1024px;
   .notice--success,
   .notice--danger {
     color: #{$text};
-    border-color: #{$text};
+    border-color: #{$border-dark};
+    background-color: #{$background-light};
   }
 }
 
 html:not([data-theme="dark"]) footer {
-  color: #000000;
+  color: #{$text};
 }
 
 // Do not change the color of the social icons in the feed icons
