@@ -370,27 +370,85 @@ h6 {
    PAGE CONTENT
    ========================================================================== */
 
+/* --- Global text color overrides (Safari fix) --- */
+body,
+body p,
+body li,
+body td,
+body th,
+body span,
+body div {
+    color: #c8c8d8 !important;
+}
+
+.page__content,
+.page__content p,
+.page__content li,
+.page__content td,
+.page__content span {
+    color: #c8c8d8 !important;
+}
+
+.page__content strong,
+.page__content b {
+    color: #f0f0f5 !important;
+}
+
 .page__content a {
-    color: #6fc3df;
+    color: #6fc3df !important;
     text-decoration: none;
 }
 
 .page__content a:hover {
     text-decoration: underline;
-    color: #8dd4ea;
+    color: #8dd4ea !important;
 }
 
-.page__title {
-    color: #f0f0f5;
+.page__title,
+h1.page__title {
+    color: #f0f0f5 !important;
     font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 .page__meta {
-    color: #6b6b80;
+    color: #6b6b80 !important;
 }
 
 .page__date {
-    color: #6b6b80;
+    color: #6b6b80 !important;
+}
+
+/* --- Archive / Publication items (Safari fix) --- */
+.archive__item,
+.archive__item p,
+.archive__item span,
+.archive__item li {
+    color: #c8c8d8 !important;
+}
+
+.archive__item h2,
+.archive__item-title,
+.archive__item-title a {
+    color: #f0f0f5 !important;
+}
+
+.archive__item-title a:hover {
+    color: #6fc3df !important;
+}
+
+.archive__item-excerpt,
+.archive__item-excerpt p {
+    color: #9a9aae !important;
+}
+
+/* --- Wordwrap / Google Scholar link --- */
+.wordwrap,
+.wordwrap a {
+    color: #c8c8d8 !important;
+}
+
+.wordwrap a {
+    color: #6fc3df !important;
 }
 
 /* ---------- CODE BLOCKS ---------- */
@@ -404,12 +462,25 @@ code {
    ARCHIVE PAGE STYLING
    ========================================================================== */
 
+.archive,
+.archive p,
+.archive span,
+.archive li {
+    color: #c8c8d8 !important;
+}
+
+.archive h2 {
+    color: #f0f0f5 !important;
+}
+
 .archive a {
     text-decoration: none;
+    color: #f0f0f5 !important;
 }
 
 .archive a:hover {
     text-decoration: none;
+    color: #6fc3df !important;
 }
 
 /* ==========================================================================

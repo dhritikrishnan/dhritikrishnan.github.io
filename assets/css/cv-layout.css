@@ -1,0 +1,330 @@
+/* ==========================================================================
+   CV PAGE — Card-based layout
+   ========================================================================== */
+
+.cv-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+}
+
+/* ---------- Header row ---------- */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.cv-header h1 {
+    font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f0f0f5;
+    margin: 0;
+}
+
+.cv-header p {
+    color: #9a9aae;
+    font-size: 0.92rem;
+    margin: 0.25rem 0 0;
+}
+
+/* PDF button */
+.cv-pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: 1.5px solid #3a9fbf;
+    color: #6fc3df;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.cv-pdf-btn:hover {
+    background: rgba(111, 195, 223, 0.1);
+    border-color: #6fc3df;
+    color: #8dd4ea;
+    text-decoration: none;
+}
+
+.cv-pdf-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* ==========================================================================
+   Section card
+   ========================================================================== */
+
+.cv-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.cv-card:hover {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.cv-card h2 {
+    font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #f0f0f5;
+    margin: 0 0 1.2rem;
+}
+
+/* ==========================================================================
+   About Me card
+   ========================================================================== */
+
+.cv-about p {
+    color: #c8c8d8;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Interests card
+   ========================================================================== */
+
+.cv-interest {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #c8c8d8;
+    line-height: 1.6;
+}
+
+.cv-interest:last-child {
+    margin-bottom: 0;
+}
+
+.cv-interest-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.cv-interest strong {
+    color: #f0f0f5;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Education / Experience entries
+   ========================================================================== */
+
+.cv-entry {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.cv-entry:last-child {
+    margin-bottom: 0;
+}
+
+/* Left column — date + location */
+.cv-entry-meta {
+    flex: 0 0 140px;
+    text-align: left;
+}
+
+.cv-date-badge {
+    display: inline-block;
+    background: rgba(111, 195, 223, 0.12);
+    color: #6fc3df;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-bottom: 0.35rem;
+}
+
+.cv-location {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: #9a9aae;
+    margin-top: 0.2rem;
+}
+
+.cv-location svg {
+    width: 12px;
+    height: 12px;
+    fill: #9a9aae;
+    flex-shrink: 0;
+}
+
+/* Right column — details */
+.cv-entry-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.cv-entry-body h3 {
+    font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6fc3df;
+    margin: 0 0 0.15rem;
+}
+
+.cv-entry-body h4 {
+    font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #f0f0f5;
+    margin: 0 0 0.1rem;
+}
+
+.cv-entry-body .cv-subtitle {
+    font-style: italic;
+    color: #b0b0c0;
+    font-size: 0.88rem;
+    margin: 0 0 0.5rem;
+}
+
+.cv-entry-body ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.cv-entry-body li {
+    color: #c8c8d8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+}
+
+.cv-entry-body li:last-child {
+    margin-bottom: 0;
+}
+
+/* Advisor / role subtitle */
+.cv-role {
+    font-size: 0.88rem;
+    color: #9a9aae;
+    font-style: italic;
+    margin: 0.1rem 0 0.4rem;
+}
+
+/* ==========================================================================
+   Publications list
+   ========================================================================== */
+
+.cv-pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-pub-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: #c8c8d8;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 0.6rem;
+}
+
+.cv-pub-list li:last-child {
+    margin-bottom: 0;
+}
+
+.cv-pub-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6fc3df;
+    font-weight: 700;
+}
+
+.cv-pub-list em {
+    color: #9a9aae;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Skills
+   ========================================================================== */
+
+.cv-skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.cv-skill-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    color: #c8c8d8;
+    line-height: 1.6;
+}
+
+.cv-skill-label {
+    font-weight: 600;
+    color: #6fc3df;
+    white-space: nowrap;
+    min-width: 120px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .cv-page {
+        padding: 0 0.5rem 2rem;
+    }
+
+    .cv-card {
+        padding: 1.3rem 1.2rem;
+    }
+
+    .cv-entry {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cv-entry-meta {
+        flex: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .cv-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cv-skill-row {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .cv-skill-label {
+        min-width: auto;
+    }
+}
