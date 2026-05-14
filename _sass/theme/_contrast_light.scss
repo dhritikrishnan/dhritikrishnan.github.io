@@ -1,46 +1,46 @@
 /* ==========================================================================
-   CONTRAST THEME - DARK CREATIVE VERSION
+   CONTRAST THEME - LIGHT VERSION (Lilian-Weng-inspired)
    ========================================================================== */
 
-/* Color codes used for the dark creative theme */
-$primary-color : #8b5cf6;
-$dark-primary-color : #6d28d9;
-$darker-primary-color : #5b21b6;
-$light-primary-color : #a78bfa;
-$lighter-primary-color : #c4b5fd;
-$background : #0a0a0f;
-$background-light : #12121a;
-$masthead-bg : rgba(10, 10, 15, 0.8);
-$background-lighter : #1a1a2e;
-$text : #e0e0e8;
-$text-muted : #9a9aae;
-$link : #a78bfa;
-$link-dark : #c4b5fd;
-$link-light : #8b5cf6;
-$footer : #0a0a0f;
-$border : #1e1e2e;
-$border-dark : #2a2a3e;
-$selection-bg : #6d28d9;
-$selection-text : #ffffff;
+/* Color codes used for the light theme */
+$primary-color : #1a1a1a;
+$dark-primary-color : #000000;
+$darker-primary-color : #000000;
+$light-primary-color : #4a4a4a;
+$lighter-primary-color : #737373;
+$background : #f1f1f1;
+$background-light : #ffffff;
+$masthead-bg : rgba(241, 241, 241, 0.85);
+$background-lighter : #fafafa;
+$text : #1a1a1a;
+$text-muted : #737373;
+$link : #1a1a1a;
+$link-dark : #000000;
+$link-light : #1a1a1a;
+$footer : #e9e9e9;
+$border : #e5e5e5;
+$border-dark : #d4d4d4;
+$selection-bg : #d4d4d4;
+$selection-text : #1a1a1a;
 
 /* Color codes used for the site */
-$danger-color : #f87171;
-$info-color : #60a5fa;
-$notice-color : #e0e0e8;
-$success-color : #34d399;
-$warning-color : #fbbf24;
+$danger-color : #b91c1c;
+$info-color : #1d4ed8;
+$notice-color : #1a1a1a;
+$success-color : #15803d;
+$warning-color : #b45309;
 
 /* Other basic settings for the template */
 $border-radius : 8px;
-$box-shadow : 0 4px 20px rgba(139, 92, 246, 0.08);
-$global-transition : all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$box-shadow : 0 1px 2px rgba(0, 0, 0, 0.05);
+$global-transition : all 0.2s ease-in-out;
 $masthead-height : 70px;
 $navicon-width : 28px;
 $navicon-height : 4px;
 $sidebar-link-max-width : 250px;
 $sidebar-screen-min-width : 1024px;
 
-/* Light theme for the site (repurposed as dark creative) */
+/* Light theme for the site */
 :root {
   --global-base-color : #{$primary-color};
   --global-masthead-bg-color: #{$masthead-bg};
@@ -48,7 +48,7 @@ $sidebar-screen-min-width : 1024px;
   --global-footer-bg-color : #{$footer};
   --global-border-color : #{$border};
   --global-dark-border-color : #{$border-dark};
-  --global-code-background-color : #{$background-light};
+  --global-code-background-color : #{$background-lighter};
   --global-code-text-color : #{$text};
   --global-fig-caption-color : #{$text-muted};
   --global-link-color : #{$link};
@@ -63,14 +63,14 @@ $sidebar-screen-min-width : 1024px;
   --global-selection-bg-color : #{$selection-bg};
   --global-selection-text-color : #{$selection-text};
 
-  /* Custom creative variables */
-  --accent-gradient: linear-gradient(135deg, #8b5cf6, #6366f1, #3b82f6);
+  /* Card/surface variables */
+  --accent-gradient: linear-gradient(135deg, #1a1a1a, #4a4a4a);
   --card-bg: #{$background-light};
   --card-border: #{$border};
-  --card-hover-border: rgba(139, 92, 246, 0.4);
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-  --card-hover-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
-  --glow-color: rgba(139, 92, 246, 0.3);
+  --card-hover-border: #{$border-dark};
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --card-hover-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --glow-color: rgba(0, 0, 0, 0.08);
 }
 
 /* Text selection styling */
@@ -84,7 +84,7 @@ $sidebar-screen-min-width : 1024px;
   color: var(--global-selection-text-color);
 }
 
-/* Override notice colors for dark creative */
+/* Notice colors for light theme */
 .page__content {
 
   .notice,

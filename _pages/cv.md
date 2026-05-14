@@ -42,7 +42,7 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">2025 – 2026</span>
+        <span class="cv-date-badge">Aug 2025 – Dec 2026</span>
         <div class="cv-location">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
           Pittsburgh, PA
@@ -53,7 +53,7 @@ redirect_from:
         <h4>Carnegie Mellon University</h4>
         <div class="cv-subtitle">Computational Data Science</div>
         <ul>
-          <li>Deep Learning (PhD), Large Language Models, LLM Systems, Cloud Computing</li>
+          <li>Coursework: Deep Learning, Large Language Models, LLM Systems, Deep Reinforcement Learning &amp; Control, AI Agents</li>
         </ul>
       </div>
     </div>
@@ -66,7 +66,7 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">2024 – 2025</span>
+        <span class="cv-date-badge">Jul 2024 – Jul 2025</span>
         <div class="cv-location">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
           Bangalore, India
@@ -90,7 +90,7 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">2026 – Present</span>
+        <span class="cv-date-badge">Jan 2026 – Present</span>
         <div class="cv-location">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
           Pittsburgh, PA
@@ -108,7 +108,7 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">2026 – Present</span>
+        <span class="cv-date-badge">Jan 2026 – May 2026</span>
       </div>
       <div class="cv-entry-body">
         <h3>Flash-Attention Style GQA</h3>
@@ -128,27 +128,28 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">2025 – 2026</span>
+        <span class="cv-date-badge">Jan 2026 – Present</span>
       </div>
       <div class="cv-entry-body">
-        <h3>Semantic Span Annotation Benchmark</h3>
-        <div class="cv-role">Python, Hugging Face, LLM APIs</div>
+        <h3>Spec Learning</h3>
+        <div class="cv-role">Python, LLM APIs, DPO, LoRA, Hugging Face</div>
         <ul>
-          <li>Built an async evaluation pipeline for long-context span extraction across <strong>7 LLMs</strong> and <strong>5 datasets</strong>, handling batched inference with rate-limit management and programmatic character-level span alignment.</li>
-          <li>Found that adding ontology definitions to prompts improves F1 from <strong>1.8%</strong> to <strong>57.5%</strong> on complex extraction tasks but degrades simpler pattern-matching tasks by <strong>3–5%</strong>.</li>
+          <li>Designed a four-stage pipeline that distills human preference pairs into natural-language specs for <strong>inference-time LLM alignment</strong> without fine-tuning.</li>
+          <li>Outperformed LoRA-based DPO across <strong>6 domains</strong> (code, math, clinical, Q&amp;A) using <strong>50× less data</strong> and <strong>zero parameter updates</strong>, achieving a <strong>75%</strong> pairwise win rate against fine-tuned baselines.</li>
         </ul>
       </div>
     </div>
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">2024</span>
+        <span class="cv-date-badge">Nov 2025 – Feb 2026</span>
       </div>
       <div class="cv-entry-body">
-        <h3>Underwater Object Detection</h3>
-        <div class="cv-role">PyTorch, YOLOv8, Pix2Pix, CycleGAN</div>
+        <h3>Semantic Span Annotation</h3>
+        <div class="cv-role">Python, Hugging Face, LLM APIs</div>
         <ul>
-          <li>Built a GAN-based image restoration pipeline (Pix2Pix, CycleGAN) to remove underwater haze and color distortion, improving downstream YOLOv8 detection confidence by <strong>7%</strong>.</li>
+          <li>Built an async evaluation pipeline for long-context span extraction across <strong>7 LLMs</strong>, handling batched inference with rate-limit management and programmatic character-level span alignment.</li>
+          <li>Found that adding ontology definitions to prompts improves F1 from <strong>1.8%</strong> to <strong>57.5%</strong> on complex extraction tasks but degrades simpler pattern-matching tasks by <strong>3–5%</strong>.</li>
         </ul>
       </div>
     </div>
@@ -159,10 +160,9 @@ redirect_from:
   <div class="cv-card">
     <h2>Select Publications</h2>
     <ul class="cv-pub-list">
-      <li>MCQ Difficulty Prediction via Persona-Driven LLM Framework. <em>Under review, AIED 2026.</em></li>
-      <li>Systematic Analysis of Underwater Image Dehazing and Object Detection. <em>6th Asia Symposium on Image Processing (ASIP), 2024.</em></li>
-      <li>Automated Notes and Question Generation. <em>IEEE 4th International Conference on Software Engineering, 2024.</em></li>
-      <li>Voice Modulation in Audiobook Narration. <em>IEEE 11th International Conference on Soft Computing &amp; Machine Intelligence, 2024.</em></li>
+      <li>Towards Spec Learning: Inference-Time Alignment from Preference Pairs. <em>Under review at NeurIPS 2026.</em></li>
+      <li>Semantic Span Annotation: An Exploratory Study of LLM Annotation. <em>SRW ACL 2026.</em></li>
+      <li>MCQ Difficulty Prediction via Persona-Driven LLM Framework. <em>AIED 2026.</em></li>
     </ul>
   </div>
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CV PAGE — Card-based layout
+   CV PAGE — Card-based layout (light theme)
    ========================================================================== */
 
 .cv-page {
@@ -20,12 +20,12 @@
     font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
-    color: #f0f0f5;
+    color: #1a1a1a;
     margin: 0;
 }
 
 .cv-header p {
-    color: #9a9aae;
+    color: #737373;
     font-size: 0.92rem;
     margin: 0.25rem 0 0;
 }
@@ -35,9 +35,9 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background: transparent;
-    border: 1.5px solid #3a9fbf;
-    color: #6fc3df;
+    background: #ffffff;
+    border: 1.5px solid #d4d4d4;
+    color: #1a1a1a;
     font-family: "Inter", sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
@@ -46,12 +46,13 @@
     text-decoration: none;
     transition: all 0.25s ease;
     flex-shrink: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .cv-pdf-btn:hover {
-    background: rgba(111, 195, 223, 0.1);
-    border-color: #6fc3df;
-    color: #8dd4ea;
+    background: #f4f4f4;
+    border-color: #a3a3a3;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -66,23 +67,25 @@
    ========================================================================== */
 
 .cv-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid #d4d4d4;
     border-radius: 12px;
     padding: 1.8rem 2rem;
     margin-bottom: 1.5rem;
-    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cv-card:hover {
-    border-color: rgba(255, 255, 255, 0.14);
+    border-color: #a3a3a3;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .cv-card h2 {
     font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5rem;
-    font-weight: 400;
-    color: #f0f0f5;
+    font-weight: 600;
+    color: #1a1a1a;
     margin: 0 0 1.2rem;
 }
 
@@ -91,7 +94,7 @@
    ========================================================================== */
 
 .cv-about p {
-    color: #c8c8d8;
+    color: #4a4a4a;
     line-height: 1.75;
     font-size: 0.95rem;
     margin: 0;
@@ -107,7 +110,7 @@
     gap: 0.5rem;
     margin-bottom: 0.75rem;
     font-size: 0.95rem;
-    color: #c8c8d8;
+    color: #4a4a4a;
     line-height: 1.6;
 }
 
@@ -118,10 +121,11 @@
 .cv-interest-icon {
     font-size: 1rem;
     flex-shrink: 0;
+    color: #525252;
 }
 
 .cv-interest strong {
-    color: #f0f0f5;
+    color: #1a1a1a;
     font-weight: 600;
 }
 
@@ -141,20 +145,21 @@
 
 /* Left column — date + location */
 .cv-entry-meta {
-    flex: 0 0 140px;
+    flex: 0 0 165px;
     text-align: left;
 }
 
 .cv-date-badge {
     display: inline-block;
-    background: rgba(111, 195, 223, 0.12);
-    color: #6fc3df;
+    background: #f1f1f1;
+    color: #1a1a1a;
     font-size: 0.78rem;
     font-weight: 600;
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
     white-space: nowrap;
     margin-bottom: 0.35rem;
+    border: 1px solid #e5e5e5;
 }
 
 .cv-location {
@@ -162,14 +167,14 @@
     align-items: center;
     gap: 0.3rem;
     font-size: 0.8rem;
-    color: #9a9aae;
+    color: #737373;
     margin-top: 0.2rem;
 }
 
 .cv-location svg {
     width: 12px;
     height: 12px;
-    fill: #9a9aae;
+    fill: #737373;
     flex-shrink: 0;
 }
 
@@ -183,7 +188,7 @@
     font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #6fc3df;
+    color: #1a1a1a;
     margin: 0 0 0.15rem;
 }
 
@@ -191,13 +196,13 @@
     font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
-    color: #f0f0f5;
+    color: #1a1a1a;
     margin: 0 0 0.1rem;
 }
 
 .cv-entry-body .cv-subtitle {
     font-style: italic;
-    color: #b0b0c0;
+    color: #525252;
     font-size: 0.88rem;
     margin: 0 0 0.5rem;
 }
@@ -208,7 +213,7 @@
 }
 
 .cv-entry-body li {
-    color: #c8c8d8;
+    color: #4a4a4a;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 0.3rem;
@@ -221,7 +226,7 @@
 /* Advisor / role subtitle */
 .cv-role {
     font-size: 0.88rem;
-    color: #9a9aae;
+    color: #737373;
     font-style: italic;
     margin: 0.1rem 0 0.4rem;
 }
@@ -239,7 +244,7 @@
 .cv-pub-list li {
     position: relative;
     padding-left: 1.2rem;
-    color: #c8c8d8;
+    color: #4a4a4a;
     font-size: 0.92rem;
     line-height: 1.65;
     margin-bottom: 0.6rem;
@@ -253,12 +258,12 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: #6fc3df;
+    color: #1a1a1a;
     font-weight: 700;
 }
 
 .cv-pub-list em {
-    color: #9a9aae;
+    color: #737373;
     font-style: normal;
 }
 
@@ -277,13 +282,13 @@
     align-items: baseline;
     gap: 0.75rem;
     font-size: 0.92rem;
-    color: #c8c8d8;
+    color: #4a4a4a;
     line-height: 1.6;
 }
 
 .cv-skill-label {
     font-weight: 600;
-    color: #6fc3df;
+    color: #1a1a1a;
     white-space: nowrap;
     min-width: 120px;
     flex-shrink: 0;
