@@ -1,7 +1,7 @@
 ---
 title: 'Spec Learning: Compiling Preference Pairs into Inference-Time Prompts'
 date: 2026-05-15
-published: false
+published: True
 permalink: /posts/2026/05/spec-learning-inference-time-alignment/
 tags:
   - alignment
