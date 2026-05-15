@@ -18,7 +18,7 @@ redirect_from:
 
   <div class="about-header__text">
     <h1 class="about-name">Dhriti <span class="last-name">Krishnan</span></h1>
-    <p class="about-subtitle">AI @ <a href="https://www.lti.cs.cmu.edu" target="_blank">CMU LTI</a></p>
+    <p class="about-subtitle">AI @ <a href="https://www.lti.cs.cmu.edu" target="_blank">CMU SCS</a></p>
 
 
 <div class="about-bio">
