@@ -1,7 +1,7 @@
 ---
 title: 'Modeling Learner Heterogeneity for MCQ Difficulty Prediction'
-date: 2026-05-14
-permalink: /posts/2026/05/mcq-difficulty-cognitive-profiling/
+date: 2026-03-30
+permalink: /posts/2026/03/mcq-difficulty-cognitive-profiling/
 tags:
   - assessment
   - item response theory
@@ -17,7 +17,7 @@ These methods share an assumption that does not match how learners actually fail
 
 Our paper at AIED 2026 starts from this gap. The hypothesis is that student errors are structured around discrete cognitive profiles, and that conditioning simulated students on these profiles rather than on a scalar ability gives better difficulty estimates.
 
-## The pipeline
+## The Pipeline
 
 ![Pipeline diagram](/images/blog/mcq/pipeline.png)
 
@@ -31,7 +31,7 @@ Four stages, plus a ground-truth estimation step:
 
 Steps 1 and 2 are where the heterogeneity assumption enters. The rest is standard.
 
-## Finding the personas
+## Finding the Personas
 
 We use EEDI tasks 3 and 4: 948 mathematics MCQs, 4,918 students, 1,382,728 total interaction records. For psychometric profiling we keep questions with at least 50 responses and students with at least 10 attempts, then fit an LCA model with a binary measurement model over correctness vectors.
 
@@ -57,7 +57,7 @@ The Conceptual Reasoner is a useful case to think about. They can reason about w
 
 ![Persona spotlight: the Conceptual Reasoner](/images/blog/mcq/persona-spotlight.png)
 
-## Simulating responses
+## Simulating Responses
 
 With the personas in hand: for each item, what would each persona do? We feed Claude 3.7 Sonnet the question image (EEDI questions are stored as images, so we use the vision capability directly) together with the persona's name and description, and ask the model to estimate the probability of selecting each of the four answer options *as that student type*. The instruction matters. We are not asking the model to solve the problem optimally. We are asking it to predict what a learner with that specific cognitive profile would select.
 
@@ -65,7 +65,7 @@ For each item this produces a $5 \times 4$ matrix of option probabilities, one r
 
 > A custom figure would help here. A small heatmap showing the $5 \times 4$ probability matrix for one example item, with the correct option highlighted, would make the abstract "K × 4 matrix" concrete and let readers see how different personas concentrate probability mass on different distractors. Happy to put this together if you want to pull data from one item in the experiments.
 
-## Predicting difficulty
+## Predicting Difficulty
 
 For each persona $c$ we extract the probability assigned to the correct option, $p^{(c)}_{i,\text{correct}}$. Across the five personas we compute the mean, variance, and range of these correct-option probabilities. The item's mathematical topic (Number, Algebra, Geometry and Measure) is one-hot encoded. Numeric features are standardized.
 
@@ -87,7 +87,7 @@ A 25% MSE reduction against the strongest baseline, and $R^2$ goes from 0.525 to
 
 One caveat. Feng et al. use a different setup: 327 MCQs (excluding diagram items) with a 65/15/20 train/val/test split, while we use 900 MCQs with five-fold CV. IRT ground truth was estimated independently in both studies. We report this comparison faithfully but it is not a strictly controlled evaluation.
 
-## What this says
+## What This Says
 
 The framing we keep coming back to is that *item difficulty is not a property of the item alone*. It emerges from the interaction between an item and the learner population. A multi-step symbolic manipulation problem can be easy for a Rule Memorizer and hard for a Conceptual Reasoner even if those two clusters have similar overall accuracy under a one-dimensional IRT model. The persona-conditioned simulation makes this interaction visible to the predictor, and we think that is why the features work.
 
@@ -101,16 +101,12 @@ A few downstream uses follow:
 
 **Targeted instruction.** If Rule Memorizers reliably fail a class of items, those items probably depend on conceptual understanding rather than procedural recall. Knowing which kind of student fails which kind of item is more actionable than knowing only that the item is hard.
 
-## Limitations
-
-EEDI is UK mathematics education, so the personas we discovered are domain-specific. A "Fraction Calculator" cluster does not transfer to organic chemistry. The profiling step would have to be rerun on a target domain's response data.
-
-We also treat persona assignment as static. Real students shift between profiles as they learn, and a knowledge-tracing-style temporal model would capture that better.
-
-The baseline comparison above is not perfectly controlled, as noted.
-
-## Where this is going
-
-Three threads to pull. First, apply the framework outside math to test whether the LCA-discovered profile structure is mathematics-specific or a more general feature of how learners stratify. Second, plug a knowledge-tracing model in front of the profiling step so persona assignments can drift over time. Third, run the pipeline backwards: use personas to *design* distractors that target specific misconceptions rather than to predict difficulty of existing ones.
-
 Paper: *MCQ Difficulty Prediction via Modeling Learner Heterogeneity Using Data-Driven Cognitive Profiling*, AIED 2026.
+
+## References
+
+1. Wang, Z., Lamb, A., Saveliev, E., Cameron, P., Zaykov, Y., Hernández-Lobato, J.M., Turner, R.E., Baraniuk, R.G., Barton, C., Jones, S.P., Woodhead, S., Zhang, C. *Diagnostic Questions: The NeurIPS 2020 Education Challenge.* [arXiv:2007.12061](https://arxiv.org/abs/2007.12061) (2020).
+2. Feng, W., Tran, P., Sireci, S., Lan, A.S. *Reasoning and Sampling-Augmented MCQ Difficulty Prediction via LLMs.* Artificial Intelligence in Education (AIED 2025), Springer LNCS, pp. 31–45.
+3. Scarlatos, A., Fernandez, N., Ormerod, C., Lottridge, S., Lan, A. *SMART: Simulated Students Aligned with Item Response Theory for Question Difficulty Prediction.* Proceedings of EMNLP 2025.
+4. He-Yueya, J., Ma, W.A., Gandhi, K., Domingue, B.W., Brunskill, E., Goodman, N.D. *Psychometric Alignment: Capturing Human Knowledge Distributions via Language Models.* [arXiv:2407.15645](https://arxiv.org/abs/2407.15645) (2024).
+5. Feng, W., Lee, J., McNichols, H., Scarlatos, A., Smith, D., Woodhead, S., Ornelas, N., Lan, A. *Exploring Automated Distractor Generation for Math Multiple-Choice Questions via Large Language Models.* Findings of NAACL 2024, pp. 3067–3082.

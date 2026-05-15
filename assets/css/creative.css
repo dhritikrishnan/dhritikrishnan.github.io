@@ -459,6 +459,19 @@ code {
     border-color: rgba(0, 0, 0, 0.08);
 }
 
+/* ---------- TABLE HEADERS ---------- */
+.page__content thead,
+.page__content table thead {
+    background-color: #d4d4d4;
+}
+
+.page__content th,
+.page__content table th {
+    color: #1a1a1a !important;
+    font-weight: 700;
+    background-color: #d4d4d4;
+}
+
 /* ==========================================================================
    ARCHIVE PAGE STYLING
    ========================================================================== */

@@ -33,6 +33,14 @@ redirect_from:
 ## news
 
 <table class="news-table">
+<tr>
+    <td class="news-date">Apr 23, 2026</td>
+    <td>My paper on Semantic Span Annotation was accepted at ACL SRW in San Diego</td>
+  </tr>
+<tr>
+    <td class="news-date">Mar 23, 2026</td>
+    <td>My paper on Modeling Learner Heterogeneity was accepted at AIED 2026 in Seoul, Korea</td>
+  </tr>
   <tr>
     <td class="news-date">Jan 01, 2026</td>
     <td>Joined the TEEL Lab as a Graduate Researcher </td>
