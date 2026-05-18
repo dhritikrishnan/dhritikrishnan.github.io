@@ -7,7 +7,7 @@ tags:
   - large language models
   - named entity recognition
   - evaluation
-published: True
+published: False
 ---
 
 Named entity recognition, semantic role labeling, argument mining, discourse analysis, PII detection. All of these are span annotation tasks at heart: find a contiguous stretch of text and assign it a label from some ontology. Yet they are studied as separate problems, with separate datasets, separate evaluation protocols, and separate community benchmarks. The result is that we know how well LLMs do on, say, CoNLL-2003 NER, but the picture for span annotation as a general capability is fragmented.
