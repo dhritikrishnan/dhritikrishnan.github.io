@@ -22,7 +22,7 @@ redirect_from:
 
 
 <div class="about-bio">
-      <p>I'm a Master's student in the Language Technologies Institute at Carnegie Mellon University and a research assistant at the TEEL Lab, part of the Carnegie Mellon–Accenture Center of Excellence for AI. My research focuses on <strong>lightweight alignment and behavioral understanding of LLMs</strong>, including compiling sparse preference signals into inference-time specifications that rival gradient-based methods, and mechanistic analysis of how <strong>multi-agent reinforcement learning</strong> shapes collaborative reasoning.</p>
+      <p>I'm a Master's student in the Language Technologies Institute at Carnegie Mellon University and a research assistant at the TEEL Lab, part of the Carnegie Mellon–Accenture Center of Excellence for AI. My research focuses on lightweight alignment and behavioral modelling using LLMs. </p>
       <p>My recent work spans <strong>spec learning</strong>, where a handful of preference pairs produce portable natural-language prompts that match fine-tuned models without touching weights, and <strong>persona-conditioned LLM simulation</strong>, where latent class analysis models heterogeneous learner populations for difficulty prediction in educational assessment.</p>
       <p>If you like my work and want to discuss further, I'd love to hear from you. You can reach out to me via <a href="mailto:reachdhritikrishnan@gmail.com">Email</a>, <a href="https://www.linkedin.com/in/dhriti-krishnan" target="_blank">LinkedIn</a>, or <a href="https://scholar.google.com/citations?user=HIYUw1oAAAAJ&hl=en" target="_blank">Google Scholar</a> :)</p>
     </div>
@@ -34,19 +34,19 @@ redirect_from:
 
 <table class="news-table">
 <tr>
-    <td class="news-date">Apr 23, 2026</td>
+    <td class="news-date">Apr 2026</td>
     <td>My paper on Semantic Span Annotation was accepted at ACL SRW in San Diego</td>
   </tr>
 <tr>
-    <td class="news-date">Mar 23, 2026</td>
+    <td class="news-date">Mar 2026</td>
     <td>My paper on Modeling Learner Heterogeneity was accepted at AIED 2026 in Seoul, Korea</td>
   </tr>
   <tr>
-    <td class="news-date">Jan 01, 2026</td>
+    <td class="news-date">Jan 2026</td>
     <td>Joined the TEEL Lab as a Graduate Researcher </td>
   </tr>
   <tr>
-    <td class="news-date">Aug 15, 2025</td>
+    <td class="news-date">Aug 2025</td>
     <td>Started my Masters in Computational Data Science at Carnegie Mellon University!</td>
   </tr>
   <tr>
