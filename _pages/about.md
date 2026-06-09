@@ -18,7 +18,7 @@ redirect_from:
 
   <div class="about-header__text">
     <h1 class="about-name">Dhriti <span class="last-name">Krishnan</span></h1>
-    <p class="about-subtitle">AI @ <a href="https://www.lti.cs.cmu.edu" target="_blank">CMU SCS</a></p>
+    <p class="about-subtitle">AI @ <a href="https://www.lti.cs.cmu.edu" target="_blank">CMU LTI</a></p>
 
 
 <div class="about-bio">
@@ -34,6 +34,10 @@ redirect_from:
 
 <table class="news-table">
 <tr>
+    <td class="news-date">Jun 2026</td>
+    <td>Spending the summer as an ML Research Intern at Blue Origin</td>
+  </tr>
+<tr>
     <td class="news-date">Apr 2026</td>
     <td>My paper on Semantic Span Annotation was accepted at ACL SRW in San Diego</td>
   </tr>
@@ -48,9 +52,5 @@ redirect_from:
   <tr>
     <td class="news-date">Aug 2025</td>
     <td>Started my Masters in Computational Data Science at Carnegie Mellon University!</td>
-  </tr>
-  <tr>
-    <td class="news-date">May 2025</td>
-    <td>Graduated from PES University with a B.Tech in Computer Science and Engineering!</td>
   </tr>
 </table>

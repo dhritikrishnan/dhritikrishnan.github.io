@@ -3,7 +3,7 @@ layout: cv-layout
 title: "CV"
 permalink: /cv/
 author_profile: false
-published: false
+published: true
 redirect_from:
   - /resume
 ---
@@ -15,26 +15,13 @@ redirect_from:
     <div>
       <h1>CV</h1>
     </div>
+    <!-- PDF button hidden until final resume is ready
     <a href="{{ site.baseurl }}/files/cv.pdf" class="cv-pdf-btn" target="_blank">
       <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/><path d="M9 13h6v1.5H9zm0 3h6v1.5H9zm0 3h4v1.5H9z"/></svg>
       PDF
     </a>
-  </div>
+    -->
 
- 
-
-  <!-- Interests -->
-  <div class="cv-card">
-    <h2>Interests</h2>
-    <div class="cv-interest">
-      <span class="cv-interest-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#6fc3df" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="12" cy="12" r="2.5"/><line x1="8" y1="6" x2="10" y2="10.5"/><line x1="16" y1="6" x2="14" y2="10.5"/><line x1="8" y1="18" x2="10" y2="13.5"/><line x1="16" y1="18" x2="14" y2="13.5"/></svg></span>
-      <span><strong>ML Interests:</strong> Fine-tuning, RAG, Prompt Engineering, LLM Agents, Evaluation Pipelines</span>
-    </div>
-    <div class="cv-interest">
-      <span class="cv-interest-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#6fc3df" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><line x1="9" y1="1" x2="9" y2="6"/><line x1="15" y1="1" x2="15" y2="6"/><line x1="9" y1="18" x2="9" y2="23"/><line x1="15" y1="18" x2="15" y2="23"/><line x1="1" y1="9" x2="6" y2="9"/><line x1="1" y1="15" x2="6" y2="15"/><line x1="18" y1="9" x2="23" y2="9"/><line x1="18" y1="15" x2="23" y2="15"/></svg></span>
-      <span><strong>LLM Systems Interests:</strong> CUDA Kernel Development, Flash Attention, IO-aware Algorithms, TPU/JAX</span>
-    </div>
-  
   </div>
 
   <!-- Education -->
@@ -64,6 +51,23 @@ redirect_from:
   <!-- Professional Experience -->
   <div class="cv-card">
     <h2>Professional Experience</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-meta">
+        <span class="cv-date-badge">Jun 2026 – Aug 2026</span>
+        <div class="cv-location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Renton, WA
+        </div>
+      </div>
+      <div class="cv-entry-body">
+        <h3>Machine Learning Intern</h3>
+        <h4>Blue Origin</h4>
+        <ul>
+          <li>Training RL-based agents with multimodal inputs to retrieve information from knowledge graphs, supporting information access in a rocket manufacturing context.</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
@@ -101,22 +105,9 @@ redirect_from:
         <h3>Teel Lab — CMU</h3>
         <div class="cv-role">Advisor: Prof. Jaromir Savelka</div>
         <ul>
-          <li>Working with Accenture to develop a difficulty prediction model for MCQs using Latent Profile Clustering and LLM-simulated student responses on the EEDI dataset.</li>
-          <li>Reduced prediction error by <strong>25%</strong> over 2PL-IRT baselines with stronger correlation to ground-truth difficulty scores. Paper under review at AIED 2026.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-entry-meta">
-        <span class="cv-date-badge">Jan 2026 – May 2026</span>
-      </div>
-      <div class="cv-entry-body">
-        <h3>Flash-Attention Style GQA</h3>
-        <div class="cv-role">CUDA, PyTorch, JAX</div>
-        <ul>
-          <li>Implementing IO-aware Grouped Query Attention in CUDA with tiled attention, online softmax, and fused QKᵀ/softmax/value kernels to eliminate quadratic HBM overhead.</li>
-          <li>Benchmarking across GPU (<strong>A100</strong>) and TPU (<strong>v4</strong>) via JAX/Pallas, profiling throughput and memory scaling with Nsight Compute.</li>
+          <li>Developed a difficulty prediction model for MCQs using Latent Profile Clustering and LLM-simulated student responses on the EEDI dataset, reducing prediction error by <strong>25%</strong> over 2PL-IRT baselines (AIED 2026).</li>
+          <li>Built an async evaluation pipeline for long-context span extraction across <strong>7 LLMs</strong>, showing that ontology-grounded prompts raise F1 from <strong>1.8%</strong> to <strong>57.5%</strong> on complex tasks while degrading simpler pattern matching by <strong>3–5%</strong> (ACL 2026 SRW).</li>
+          <li>Designed a four-stage pipeline distilling human preference pairs into natural-language specs for <strong>inference-time alignment</strong> without fine-tuning, outperforming LoRA-based DPO across <strong>6 domains</strong> with <strong>50× less data</strong> and a <strong>75%</strong> pairwise win rate (under review, NeurIPS 2026).</li>
         </ul>
       </div>
     </div>
@@ -129,28 +120,14 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
-        <span class="cv-date-badge">Jan 2026 – Present</span>
+        <span class="cv-date-badge">Jan 2026 – May 2026</span>
       </div>
       <div class="cv-entry-body">
-        <h3>Spec Learning</h3>
-        <div class="cv-role">Python, LLM APIs, DPO, LoRA, Hugging Face</div>
+        <h3>Flash-Attention Style GQA</h3>
+        <div class="cv-role">CUDA, PyTorch, JAX</div>
         <ul>
-          <li>Designed a four-stage pipeline that distills human preference pairs into natural-language specs for <strong>inference-time LLM alignment</strong> without fine-tuning.</li>
-          <li>Outperformed LoRA-based DPO across <strong>6 domains</strong> (code, math, clinical, Q&amp;A) using <strong>50× less data</strong> and <strong>zero parameter updates</strong>, achieving a <strong>75%</strong> pairwise win rate against fine-tuned baselines.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="cv-entry">
-      <div class="cv-entry-meta">
-        <span class="cv-date-badge">Nov 2025 – Feb 2026</span>
-      </div>
-      <div class="cv-entry-body">
-        <h3>Semantic Span Annotation</h3>
-        <div class="cv-role">Python, Hugging Face, LLM APIs</div>
-        <ul>
-          <li>Built an async evaluation pipeline for long-context span extraction across <strong>7 LLMs</strong>, handling batched inference with rate-limit management and programmatic character-level span alignment.</li>
-          <li>Found that adding ontology definitions to prompts improves F1 from <strong>1.8%</strong> to <strong>57.5%</strong> on complex extraction tasks but degrades simpler pattern-matching tasks by <strong>3–5%</strong>.</li>
+          <li>Implemented IO-aware Grouped Query Attention in CUDA with tiled attention, online softmax, and fused QKᵀ/softmax/value kernels to eliminate quadratic HBM overhead.</li>
+          <li>Benchmarked across GPU (<strong>A100</strong>) and TPU (<strong>v4</strong>) via JAX/Pallas, profiling throughput and memory scaling with Nsight Compute.</li>
         </ul>
       </div>
     </div>
@@ -172,16 +149,20 @@ redirect_from:
     <h2>Technical Skills</h2>
     <div class="cv-skills-grid">
       <div class="cv-skill-row">
-        <span class="cv-skill-label">ML &amp; AI</span>
-        <span>PyTorch, CUDA, Flash Attention, RAG, Hugging Face Transformers, LangChain, scikit-learn</span>
+        <span class="cv-skill-label">Frameworks &amp; Libraries</span>
+        <span>PyTorch, JAX, CUDA, Hugging Face Transformers, scikit-learn</span>
+      </div>
+      <div class="cv-skill-row">
+        <span class="cv-skill-label">Methods</span>
+        <span>Reinforcement Learning, DPO, LoRA, Flash Attention, distributed &amp; multi-GPU/TPU training, RAG</span>
       </div>
       <div class="cv-skill-row">
         <span class="cv-skill-label">Languages</span>
         <span>Python, C/C++, SQL</span>
       </div>
       <div class="cv-skill-row">
-        <span class="cv-skill-label">Infrastructure</span>
-        <span>AWS (EC2), GCP, Azure ML Studio, Docker, Kubernetes, Git</span>
+        <span class="cv-skill-label">Compute &amp; Tooling</span>
+        <span>A100, TPU v4, AWS, GCP, Docker, Git</span>
       </div>
     </div>
   </div>
