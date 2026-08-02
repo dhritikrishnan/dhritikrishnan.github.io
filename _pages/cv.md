@@ -1,6 +1,8 @@
 ---
 layout: cv-layout
 title: "CV"
+seo_title: "CV - Dhriti Krishnan"
+description: "CV of Dhriti Krishnan: MS in Computational Data Science at Carnegie Mellon, ML research intern at Blue Origin, researcher with NVIDIA Research and CMU's TEEL Lab, with publications at ACL SRW and AIED."
 permalink: /cv/
 author_profile: false
 published: true
@@ -41,7 +43,7 @@ redirect_from:
         <h4>Carnegie Mellon University</h4>
         <div class="cv-subtitle">Computational Data Science</div>
         <ul>
-          <li>Coursework: Deep Learning, Large Language Models, LLM Systems, Deep Reinforcement Learning &amp; Control, AI Agents</li>
+          <li>Coursework: Deep Learning, Large Language Models, LLM Systems, AI Agents</li>
         </ul>
       </div>
     </div>
@@ -61,10 +63,12 @@ redirect_from:
         </div>
       </div>
       <div class="cv-entry-body">
-        <h3>Machine Learning Intern</h3>
+        <h3>Machine Learning Research Intern</h3>
         <h4>Blue Origin</h4>
         <ul>
-          <li>Training RL-based agents with multimodal inputs to retrieve information from knowledge graphs, supporting information access in a rocket manufacturing context.</li>
+          <li>Built a synthetic data-generation pipeline producing natural-language queries matched to real user distributions and distilled teacher-model trajectories over them for retrieval over a hierarchical knowledge graph.</li>
+          <li>Post-trained a <strong>3B-parameter</strong> code LLM into a multi-turn, tool-using retrieval agent via supervised fine-tuning on distilled teacher trajectories, raising held-out task accuracy from 37.5% to <strong>85.1%</strong> (<strong>+47.6 points</strong>).</li>
+          <li>Designed a <strong>GRPO</strong> reinforcement-learning pipeline with an LLM-judge reward, vLLM rollouts, and LoRA policy updates; deployed the distilled agent at <strong>96%</strong> lower query-serving cost than the frontier baseline.</li>
         </ul>
       </div>
     </div>
@@ -95,6 +99,24 @@ redirect_from:
 
     <div class="cv-entry">
       <div class="cv-entry-meta">
+        <span class="cv-date-badge">Jun 2026 – Present</span>
+        <div class="cv-location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          Pittsburgh, PA
+        </div>
+      </div>
+      <div class="cv-entry-body">
+        <h3>NVIDIA Research — CMU</h3>
+        <div class="cv-role">Advisors: Zhenzhen Li (NVIDIA); Prof. Guannan Qu (CMU)</div>
+        <ul>
+          <li>Developing representation-independent metrics that compare agentic code-editing policies against <strong>PPO</strong>, <strong>SAC</strong>, and <strong>MPC</strong> on common axes, measuring policy change as occupancy divergence rather than parameter distance.</li>
+          <li>Building an agentic MPC system in which an LLM agent maintains cost functions, constraints, and recovery logic around a fixed optimizer, benchmarked against a differentiable-MPC-plus-RL baseline.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-meta">
         <span class="cv-date-badge">Jan 2026 – Present</span>
         <div class="cv-location">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
@@ -102,12 +124,12 @@ redirect_from:
         </div>
       </div>
       <div class="cv-entry-body">
-        <h3>Teel Lab — CMU</h3>
+        <h3>TEEL Lab — CMU</h3>
         <div class="cv-role">Advisor: Prof. Jaromir Savelka</div>
         <ul>
           <li>Developed a difficulty prediction model for MCQs using Latent Profile Clustering and LLM-simulated student responses on the EEDI dataset, reducing prediction error by <strong>25%</strong> over 2PL-IRT baselines (AIED 2026).</li>
           <li>Built an async evaluation pipeline for long-context span extraction across <strong>7 LLMs</strong>, showing that ontology-grounded prompts raise F1 from <strong>1.8%</strong> to <strong>57.5%</strong> on complex tasks while degrading simpler pattern matching by <strong>3–5%</strong> (ACL 2026 SRW).</li>
-          <li>Designed a four-stage pipeline distilling human preference pairs into natural-language specs for <strong>inference-time alignment</strong> without fine-tuning, outperforming LoRA-based DPO across <strong>6 domains</strong> with <strong>50× less data</strong> and a <strong>75%</strong> pairwise win rate (under review, NeurIPS 2026).</li>
+          <li>Designed a four-stage pipeline distilling human preference pairs into natural-language specs for <strong>inference-time alignment</strong> without fine-tuning, outperforming LoRA-based DPO across <strong>6 domains</strong> with <strong>50× less data</strong> and a <strong>75%</strong> pairwise win rate (under review).</li>
         </ul>
       </div>
     </div>
@@ -138,7 +160,7 @@ redirect_from:
   <div class="cv-card">
     <h2>Select Publications</h2>
     <ul class="cv-pub-list">
-      <li>Towards Spec Learning: Inference-Time Alignment from Preference Pairs. <em>Under review at NeurIPS 2026.</em></li>
+      <li>Towards Spec Learning: Inference-Time Alignment from Preference Pairs. <em>Under review.</em></li>
       <li>Semantic Span Annotation: An Exploratory Study of LLM Annotation. <em>SRW ACL 2026.</em></li>
       <li>MCQ Difficulty Prediction via Persona-Driven LLM Framework. <em>AIED 2026.</em></li>
     </ul>
@@ -149,12 +171,8 @@ redirect_from:
     <h2>Technical Skills</h2>
     <div class="cv-skills-grid">
       <div class="cv-skill-row">
-        <span class="cv-skill-label">Frameworks &amp; Libraries</span>
-        <span>PyTorch, JAX, CUDA, Hugging Face Transformers, scikit-learn</span>
-      </div>
-      <div class="cv-skill-row">
-        <span class="cv-skill-label">Methods</span>
-        <span>Reinforcement Learning, DPO, LoRA, Flash Attention, distributed &amp; multi-GPU/TPU training, RAG</span>
+        <span class="cv-skill-label">ML &amp; Post-Training</span>
+        <span>PyTorch, CUDA, Hugging Face Transformers, PEFT/LoRA, DeepSpeed, vLLM</span>
       </div>
       <div class="cv-skill-row">
         <span class="cv-skill-label">Languages</span>
@@ -162,7 +180,7 @@ redirect_from:
       </div>
       <div class="cv-skill-row">
         <span class="cv-skill-label">Compute &amp; Tooling</span>
-        <span>A100, TPU v4, AWS, GCP, Docker, Git</span>
+        <span>AWS, GCP, Docker, Git, Weights &amp; Biases</span>
       </div>
     </div>
   </div>
