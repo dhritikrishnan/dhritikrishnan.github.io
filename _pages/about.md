@@ -44,10 +44,7 @@ redirect_from:
     <td class="news-date">Jul 2026</td>
     <td>Attended ACL in San Diego</td>
 </tr>
-<tr>
-    <td class="news-date">Jun 2026</td>
-    <td>Started research with NVIDIA Research and CMU on agentic control and policy comparison</td>
-</tr>
+
 <tr>
     <td class="news-date">Jun 2026</td>
     <td>Spending the summer as an ML Research Intern at Blue Origin</td>
